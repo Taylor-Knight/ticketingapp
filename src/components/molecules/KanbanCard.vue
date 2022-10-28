@@ -9,5 +9,3 @@
         item: Object
     })
 </script>
-
-
