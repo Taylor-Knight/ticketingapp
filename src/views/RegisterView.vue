@@ -21,7 +21,6 @@ import axios from "axios"
 import { api } from "../assets/api"
 import { useRouter } from "vue-router"
 
-
 const errorBag = reactive({
   email: "",
   password: "",
@@ -76,7 +75,8 @@ function register() {
 
   api().post("/register", form).then((response) => {
     if (response.status == 200) {
-      alert("registered successfully")
+      window.localStorage.setItem("user", response.data.id)
+      router.replace("/dashboard")
       }
       else 
       {

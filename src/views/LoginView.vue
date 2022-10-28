@@ -47,7 +47,6 @@ const form = reactive({
   password: "",
 })
 
-
 const router = useRouter()
 
 function login() {
